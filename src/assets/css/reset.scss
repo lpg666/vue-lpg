@@ -1,0 +1,167 @@
+@import './global';
+/*CSS Reset*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+header,
+hgroup,
+nav,
+section,
+article,
+aside,
+footer,
+figure,
+figcaption,
+menu,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+  height: 100%;
+}
+
+body {
+    font-family: PingFangSC-Regular,Helvetica,"Droid Sans",Arial,sans-serif;
+    // line-height: 1.6;
+    // -webkit-user-select: none;
+    color: #333;
+    // background-color: $context;
+    background-color: #eee;
+    outline: 0;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+    color: $title;
+}
+a{
+    color: $title;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+fieldset,
+img {
+    border: 0;
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+
+    outline: 0;
+}
+
+button {
+    border: 0;
+    background: none;
+
+    -webkit-appearance: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:focus {
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input{
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    appearance:none;
+    -webkit-appearance: none;
+}
+textarea {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    appearance:none;
+    -webkit-appearance:none;
+    resize: none;
+    vertical-align: top;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+#app{
+    height: 100%;
+    background-color: $context;
+    >div{min-height: 100%;}
+}

@@ -1,0 +1,31 @@
+//color
+
+// $skin:                 #f7c100;//黄色皮肤，主色
+$skin:                 #ffd940;//黄色皮肤，主色
+
+$price:                #fa0202;
+// $price:                rgb(249,68,79);//价格、优惠
+$select:               rgb(0,181,15);//选中、开关、激活
+
+$strong:               rgb(255,111,0);//特别强调、标题、引导性
+$title:                rgb(51,51,51);//重要、标题
+$common:               rgb(102,102,102);//普通、默认
+$desc:                 rgb(125,126,128);//次要、描述
+
+$border:               rgb(228,228,228);//分割线、描边
+// $context:              rgb(240,242,245);//底色、背景
+$context:              #f8f8f8;
+
+//border
+// $bordercolor:           #e0e0e0;
+// $bordercolor:           #d7ddea;
+$bordercolor:           #e5e5e5;
+$border-t:              -webkit-gradient(linear, left bottom, left top, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, $bordercolor));
+$border-b:              -webkit-gradient(linear, left top, left bottom, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, $bordercolor));
+$border-l:              -webkit-gradient(linear, right top, left top, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, $bordercolor));
+$border-r:              -webkit-gradient(linear, left top, right top, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, $bordercolor));
+
+$z-index-border: 10;
+
+$border-radius-base:    0.046rem;
+$border-radius-lg:      0.092rem;
