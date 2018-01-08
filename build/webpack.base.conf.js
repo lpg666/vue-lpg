@@ -30,6 +30,15 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+  devServer: {
+    historyApiFallback: true,
+    noInfo: true,
+    contentBase: path.join(__dirname, 'dist')
+  },
+  performance: {
+    hints: "error"
+  },
+  devtool: '#eval-source-map',
   plugins: [
     new webpack.DllReferencePlugin({
       context: path.join(__dirname, '..'),
