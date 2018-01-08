@@ -28,8 +28,7 @@ new Vue({
   el: '#app',
   router,
   store,
-  template: '<App/>',
-  components: { App }
+  render: h => h(App)
 })
 
 // 加载微信sdk
@@ -39,6 +38,7 @@ if (process.env.NODE_ENV !== 'development') {
   weixinScript.src = '//res.wx.qq.com/open/js/jweixin-1.2.0.js'
   nowcript.parentNode.insertBefore(weixinScript, nowcript)
 }
+
 // 启动一个用于移动端的控制台
 if (process.env.NODE_ENV !== 'production' && (window.isAndroid || window.isIos)) {
   require.ensure([], () => {

@@ -1,8 +1,12 @@
 'use strict'
 const path = require('path')
+const webpack = require('webpack')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -26,6 +30,21 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+  plugins: [
+    new webpack.DllReferencePlugin({
+      context: path.join(__dirname, '..'),
+      manifest: require('../vendor-manifest.json')
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './index.html',
+      filename: 'index.html'
+    }),
+    new CopyWebpackPlugin([
+      { from: 'static', to: 'static' }
+    ]),
+    new CleanWebpackPlugin(['dist'])
+  ],
   module: {
     rules: [
       {

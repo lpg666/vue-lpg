@@ -1,10 +1,6 @@
-import Vue from 'vue'
 import axios from 'axios'
 import Qs from 'qs'
 import api from './api'
-// import router from '@/router'
-
-Vue.use(axios)
 
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
