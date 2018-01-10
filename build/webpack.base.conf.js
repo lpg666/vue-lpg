@@ -36,7 +36,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist')
   },
   performance: {
-    hints: "error"
+    hints: false
   },
   devtool: '#eval-source-map',
   plugins: [

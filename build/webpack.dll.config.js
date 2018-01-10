@@ -4,7 +4,7 @@ var webpack = require("webpack")
 module.exports = {
   // 你想要打包的模块的数组
   entry: {
-    vendor: ['vue/dist/vue.esm.js', 'vue', 'vuex', 'axios', 'vue-router']
+    vendor: ['vue/dist/vue.esm.js', 'vuex', 'axios', 'vue-router']
   },
   output: {
     path: path.join(__dirname, '../static/js'), // 打包后文件输出的位置
