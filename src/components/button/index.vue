@@ -1,12 +1,12 @@
 <template>
   <div>
-    组件案例
-    <l-button></l-button>
+    Button
   </div>
 </template>
 
 <script>
 export default {
+  name: 'l-button',
   data () {
     return {
     }

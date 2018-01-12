@@ -7,6 +7,10 @@ import './utils/client'
 import './assets/css/index.scss'
 
 import VueLazyload from 'vue-lazyload'
+import Buttom from './components/button'
+
+Vue.component(Buttom.name, Buttom)
+
 //
 Vue.use(VueLazyload, {
   preLoad: 1.3,
