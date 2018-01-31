@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+import api from './api'
 import './utils/rem'
 import './utils/client'
 import './assets/css/index.scss'
@@ -11,6 +12,7 @@ import Buttom from './components/button'
 
 Vue.component(Buttom.name, Buttom)
 
+Vue.prototype.$api = api
 //
 Vue.use(VueLazyload, {
   preLoad: 1.3,

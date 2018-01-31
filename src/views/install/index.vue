@@ -7,14 +7,14 @@
 
 <script>
 // import WeixinShare from '@/utils/wechat'
-import api from '@/api'
 
 export default {
   data () {
     return {}
   },
   created () {
-    api.getCityList.get()
+    console.log(this)
+    this.$api.getCityList.get()
       .then(res => {
         console.log(res)
       })
