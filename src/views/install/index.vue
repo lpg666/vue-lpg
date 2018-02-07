@@ -1,7 +1,7 @@
 <template>
   <div>
     业务首页
-    <img src="../../assets/img/banner@2x.png"/>
+    <img style="width: 100%;" src="../../assets/img/banner@2x.png"/>
   </div>
 </template>
 
