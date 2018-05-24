@@ -22,6 +22,10 @@ router.beforeEach((to, from, next) => {
     NProgress.start()
     NProgress.inc()
   }
+  if (window.isWeixin && !localStorage.login_token) {
+    let url = encodeURIComponent(window.location.href)
+    location.href = `http://m.lpg6.top/wechatService/oauth-redirect?target_url=${url}`
+  }
   next()
 })
 

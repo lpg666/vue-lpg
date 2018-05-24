@@ -6,6 +6,36 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>lpg</title>
+
+    <script>
+      let getAllParam = function () {
+        let json = {}
+        let param = decodeURIComponent(window.location.search.substr(1))
+        param.replace(/([^&\.*]+)=([^&\.*]+)/gi, function (a, b, c) {
+          json[b] = c
+        })
+        return json
+      }
+      let getParam = function (name) {
+        return getAllParam()[name]
+      }
+      if (getParam('token')) {
+        localStorage.login_token = getParam('token')
+        let urlJson = getAllParam()
+        delete urlJson['token']
+        let arr = Object.keys(urlJson)[0]
+        let param = ''
+        for (let key in urlJson) {
+          if (key === arr) {
+            param += '?' + key + '=' + urlJson[key]
+          } else {
+            param += '&' + key + '=' + urlJson[key]
+          }
+        }
+        location.replace(location.origin + location.pathname + param)
+      }
+    </script>
+
   </head>
   <body ontouchstart>
     <div id="app"></div>
